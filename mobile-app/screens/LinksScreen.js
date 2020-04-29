@@ -51,7 +51,7 @@ class LinksScreen extends React.Component {
 
   fetchUserRecords() {
     console.log('fetch!!')
-    return fetch('http://192.168.0.11:3003/testuser',
+    return fetch('http://165.227.181.114:3003/testuser',
       {
         method: 'GET',
         mode: 'cors',

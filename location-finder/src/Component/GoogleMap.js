@@ -34,6 +34,7 @@ export class MapContainer extends Component {
     }
 
     componentDidMount() {
+        console.log(process.env.MONGODB)
         return fetch('/location',
             {
                 method: 'GET',
@@ -42,7 +43,6 @@ export class MapContainer extends Component {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
-                    'cookie': this.context.sid,
                 },
             })
             .then(res => res.json())

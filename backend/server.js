@@ -28,7 +28,7 @@ mongoose.connect(dbConfig.url, {
 
 // define a simple route
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to IP location lookup application. find ip quickly."});
+    res.json({"message": "Welcome to my location finder."});
 });
 
 require('./app/routes/all.routes.js')(app);
