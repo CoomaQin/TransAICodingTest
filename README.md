@@ -1,2 +1,2 @@
-# TransAICodingTest
-This is the repo for TransAICodingTest, including a Web application frontend, a Mobile app frontend and a backend for share..
+# Personal website of Huixiong Qin
+This is the repo of my personal website..
