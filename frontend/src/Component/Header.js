@@ -3,30 +3,38 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import {Button} from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: `1px solid ${theme.palette.divider}`
   },
   toolbarTitle: {
     flex: 1,
+    width: "70%"
   },
   toolbarSecondary: {
     justifyContent: 'space-evenly',
+    width: "30%",
     overflowX: 'auto',
+    border: "2px solid",
+
   },
   linkContainerSelected: {
-    backgroundColor: '#FAEBD7'
+    backgroundColor: '#FAEBD7',
+
   },
   linkContainer: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+
   },
-  toolbarLink: {
+  toolbarBtn: {
     padding: theme.spacing(1),
     flexShrink: 0,
     fontSize: 20,
+    border: "2px solid",
+    
   },
 }));
 
@@ -42,29 +50,29 @@ export default function Header(props) {
           variant="h5"
           color="inherit"
           align="center"
-          noWrap
           className={classes.toolbarTitle}
         >
-          {title}
+          {"Huixiong Qin"}
         </Typography>
+        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+          {sections.map((section) => (
+            <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2}>
+              <Button
+                color="inherit"
+                noWrap
+                key={section.title}
+                broder={4}
+                href={section.url}
+                className={classes.toolbarBtn}
+              >
+                {section.title}
+              </Button>
+            </div>
+          ))}
+        </Toolbar>
 
       </Toolbar>
-      <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-        {sections.map((section) => (
-          <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer}>
-            <Link
-              color="inherit"
-              noWrap
-              key={section.title}
-              variant="body2"
-              href={section.url}
-              className={classes.toolbarLink}
-            >
-              {section.title}
-            </Link>
-          </div>
-        ))}
-      </Toolbar>
+
     </React.Fragment>
   );
 }

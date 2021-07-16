@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import useInterval from '../utility/hook';
+
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -27,39 +28,67 @@ const useStyles = makeStyles((theme) => ({
   },
   mainFeaturedPostContent: {
     position: 'relative',
-    padding: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
+    height: "20rem",
+    marginBottom: "1rem"
   },
+  mainFeaturedPostContainer: {
+    border: "2rem solid",
+    borderColor: props => props.broderColor,
+  },
+  tagsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    height: "1.5rem"
+  },
+  tag: {
+    marginRight: "1rem",
+    color: "purple"
+  },
+  title: {
+    margin: "2rem",
+  },
+  subtitle: {
+    color: "blue"
+  }
 }));
 
 export default function MainFeaturedPost(props) {
-  const classes = useStyles();
+
+  let [bcr, setBcr] = useState(255);
+  let classes = useStyles({ broderColor: `rgba(${bcr}, 0, 0, 1)` });
   const { post } = props;
 
+  useInterval(() => {
+    setBcr((bcr + 10) % 256)
+  }, 100)
+
   return (
-    <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${post.image})` }}>
-      {/* Increase the priority of the hero background image */}
-      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
+    <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${post.img})` }}>
+      {<img style={{ display: 'none' }} src={post.img} alt={post.imageText} />}
       <div className={classes.overlay} />
-      <Grid container>
-        <Grid item md={6}>
-          <div className={classes.mainFeaturedPostContent}>
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+      <Grid >
+        <Grid container className={classes.mainFeaturedPostContainer} color="red">
+          <Grid container md={12} className={classes.mainFeaturedPostContent} justify="flex-end" direction="column">
+            <div container className={classes.tagsContainer}>
+              {post.hashTags.map(t => (
+                <Typography variant="h8" color="inherit" paragraph className={classes.tag}>
+                  {t}
+                </Typography>
+              ))}
+            </div>
+            <Typography component="h3" variant="h4" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              {post.email}
-            </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              {post.phone}
-            </Typography>
-            <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link>
-          </div>
+            <div container className={classes.tagsContainer}>
+              <Typography variant="h6" color="inherit" paragraph className={classes.subtitle} style={{ marginRight: "2rem" }}>
+                {post.location}
+              </Typography>
+              <Typography variant="h6" color="inherit" paragraph className={classes.subtitle} >
+                {post.date.toString()}
+              </Typography>
+            </div>
+          </Grid>
         </Grid>
       </Grid>
     </Paper>
