@@ -14,9 +14,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
     backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundSize: 'cover',
+    backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    transition: "background-size 1s",
+    '&:hover': {
+      backgroundSize: "120%",
+    },
   },
   overlay: {
     position: 'absolute',
@@ -33,7 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
   mainFeaturedPostContainer: {
     border: "2rem solid",
-    borderColor: props => props.broderColor,
+    borderImageSlice: 1,
+    // borderImageSource: "linear-gradient(to left, red, orange)"
+    borderImageSource: props => `linear-gradient(to left, rgba(${255 - props.broderColor}, 30, 225, 1), rgba(${props.broderColor}, 30, 225, 1))`,
   },
   tagsContainer: {
     display: "flex",
@@ -43,28 +49,35 @@ const useStyles = makeStyles((theme) => ({
   },
   tag: {
     marginRight: "1rem",
-    color: "purple"
+    color: theme.palette.text.tag
   },
   title: {
     margin: "2rem",
   },
   subtitle: {
-    color: "blue"
+    color: theme.palette.text.main
   }
 }));
 
-export default function MainFeaturedPost(props) {
+export default function MainFeaturedPost (props) {
 
-  let [bcr, setBcr] = useState(255);
-  let classes = useStyles({ broderColor: `rgba(${bcr}, 0, 0, 1)` });
+  let [bcr, setBcr] = useState(80);
+  let [bflag, setBflag] = useState(true);
+  let classes = useStyles({ broderColor: bcr });
   const { post } = props;
 
+  // contorl dynamic linear gradient broder
   useInterval(() => {
-    setBcr((bcr + 10) % 256)
+    console.log(bcr, bflag)
+    setBcr(bflag ? bcr + 10 : bcr - 10)
+    if ((bcr == 220) || (bcr == 80)){
+      setBflag(!bflag)
+      setBcr(bflag ? 210 : 90)
+    }
   }, 100)
 
   return (
-    <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${post.img})` }}>
+    <Paper className={classes.mainFeaturedPost}>
       {<img style={{ display: 'none' }} src={post.img} alt={post.imageText} />}
       <div className={classes.overlay} />
       <Grid >

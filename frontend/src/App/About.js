@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Main from '../Component/Main';
+import Main from '../Component/Resume';
 import theme from '../Component/theme';
 import Header from '../Component/Header';
 import Footer from '../Component/Footer';

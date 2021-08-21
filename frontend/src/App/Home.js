@@ -1,44 +1,64 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../Component/theme';
 import Header from '../Component/Header';
 import Footer from '../Component/Footer';
 import Container from '@material-ui/core/Container';
 import MainFeaturedPost from '../Component/MainFeaturedPost';
-import Grid from '@material-ui/core/Grid';
-import  mockData from '../data/mock.js';
+import FeaturedPost from '../Component/FeaturedPost';
+import mockData from '../data/mock.js';
 import { makeStyles } from '@material-ui/core/styles';
+import { Paper, CssBaseline, Grid, Divider } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
-    mainGrid: {
-        marginTop: theme.spacing(3),
-        flexDirection: 'row',
+    screen: {
+        backgroundImage: "url(https://i.loli.net/2021/08/02/TvYdfA1V3eyHw5h.jpg)",
+    },
+    body: {
+        display: "flex",
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        // borderTop: "0.5rem solid",
+        // borderColor: "#C236F2",
     },
     mainPost: {
-        marginBottom: '40%',
-        marginTop: "2%"
+        marginBottom: '2%',
+        marginTop: "2%",
+    },
+    baseLine: {
+        backgroundColor: "#C236F2"
     }
 }));
 
 
 const sections = [
     { title: 'Home', url: '/', selected: true },
-    { title: 'About', url: '/about', selected: false },
+    { title: 'Test', url: '/markdown', selected: false },
 ];
 
-export default function Home() {
+export default function Home () {
     const classes = useStyles();
-    console.log(mockData)
-
+    let featuredPost = []
+    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} />)
     return (
         <ThemeProvider theme={theme}>
-            <Header title="Location Finder" sections={sections} />
-            <CssBaseline />
-            <Container className={classes.mainPost}>
-                <MainFeaturedPost post={mockData.post[0]} />
-            </Container>
-            <Footer title="Footer" description="Thank you for your visit!" />
+            <Paper className={classes.screen}>
+                <Header title="Huixiong Qin" sections={sections} />
+                <CssBaseline />
+                {/* overide backgoundColor of Divider.root */}
+                <Divider classes={{ root: classes.baseLine }} />
+                <Container className={classes.body} >
+                    <Container className={classes.mainPost}>
+                        <MainFeaturedPost post={mockData.post[0]} />
+                    </Container>
+                    <Grid className={classes.featuredPost} container direction="row" justifyContent="center" alignItems="center">
+                        {featuredPost}
+                    </Grid>
+                </Container>
+                <Divider classes={{ root: classes.baseLine }} />
+                <Footer title="Footer" description="Thank you for your visit!" />
+            </Paper>
         </ThemeProvider>
     )
 };

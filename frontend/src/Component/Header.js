@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     width: "30%",
     overflowX: 'auto',
-    border: "2px solid",
+    // border: "2px solid",
 
   },
   linkContainerSelected: {
@@ -34,8 +34,13 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
     fontSize: 20,
     border: "2px solid",
+    color: theme.palette.text.main,
+    backgroundColor: "black"
     
   },
+  text: {
+    color: theme.palette.text.main
+  }
 }));
 
 export default function Header(props) {
@@ -46,9 +51,10 @@ export default function Header(props) {
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
         <Typography
+          classes={{colorPrimary: classes.text}} 
+          color="primary"
           component="h2"
           variant="h5"
-          color="inherit"
           align="center"
           className={classes.toolbarTitle}
         >
@@ -58,8 +64,8 @@ export default function Header(props) {
           {sections.map((section) => (
             <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2}>
               <Button
-                color="inherit"
-                noWrap
+                variant="outlined"
+                color="primary"
                 key={section.title}
                 broder={4}
                 href={section.url}

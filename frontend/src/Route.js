@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
  */
 import Home from './App/Home';
 import About from './App/About';
+import Markdown from './App/Markdown'
 
 /**
  * All routes go here.
@@ -16,6 +17,7 @@ const MainRoute = () => {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/markdown" component={Markdown} />
         </Switch>
     )
 };

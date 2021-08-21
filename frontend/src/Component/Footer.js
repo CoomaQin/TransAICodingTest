@@ -6,8 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
 function Copyright() {
+  const classes = useStyles();
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography classes={{colorPrimary: classes.text}} color="primary" variant="body2" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
         location finder
@@ -20,10 +21,13 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "transparent",
     // marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
+  text: {
+    color: theme.palette.text.main
+  }
 }));
 
 export default function Footer(props) {
@@ -33,10 +37,10 @@ export default function Footer(props) {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography classes={{colorPrimary: classes.text}} variant="h6" align="center" gutterBottom color="primary">
           {title}
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography classes={{colorPrimary: classes.text}} color="primary" variant="subtitle1" align="center" component="p">
           {description}
         </Typography>
         <Copyright />
