@@ -9,24 +9,25 @@ mockData["post"] = [
         img: "https://source.unsplash.com/random"
     },
     {
-        title: "Second Post1",
+        title: "Post1",
         hashTags: ["Tech"],
         date: new Date(),
         location: "Boston",
         img: "https://source.unsplash.com/random",
-        imageTitle: "img title 1"
+        imageTitle: "img title 1",
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/post.1.md"
     },
     {
-        title: "Second Post1",
+        title: "Post2",
         hashTags: ["Tech", "CV"],
         date: new Date(),
         location: "Boston",
         img: "https://source.unsplash.com/random",
-        imageTitle: "img title 2"
-        
+        imageTitle: "img title 2",
+        url: ""
     },
     {
-        title: "Second Post2",
+        title: "Post3",
         hashTags: ["Cooking", "Fashion"],
         date: new Date(),
         location: "New Brunswick",
@@ -34,7 +35,7 @@ mockData["post"] = [
         imageTitle: "img title 3"
     },
     {
-        title: "Second Post3",
+        title: "Post4",
         hashTags: ["Cooking", "Fashion"],
         date: new Date(),
         location: "New Brunswick",
