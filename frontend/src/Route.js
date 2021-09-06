@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
+import mockData from './data/mock.js';
 /**
  * Import all page components here
  */
@@ -17,7 +17,9 @@ const MainRoute = () => {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/markdown" component={Markdown} />
+            <Route exact path="/markdown"> 
+                <Markdown url={mockData.post[1].url}/>
+            </Route>
         </Switch>
     )
 };

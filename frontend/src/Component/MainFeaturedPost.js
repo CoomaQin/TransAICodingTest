@@ -68,7 +68,6 @@ export default function MainFeaturedPost (props) {
 
   // contorl dynamic linear gradient broder
   useInterval(() => {
-    console.log(bcr, bflag)
     setBcr(bflag ? bcr + 10 : bcr - 10)
     if ((bcr == 220) || (bcr == 80)){
       setBflag(!bflag)
@@ -82,10 +81,10 @@ export default function MainFeaturedPost (props) {
       <div className={classes.overlay} />
       <Grid >
         <Grid container className={classes.mainFeaturedPostContainer} color="red">
-          <Grid container md={12} className={classes.mainFeaturedPostContent} justify="flex-end" direction="column">
-            <div container className={classes.tagsContainer}>
-              {post.hashTags.map(t => (
-                <Typography variant="h8" color="inherit" paragraph className={classes.tag}>
+          <Grid container className={classes.mainFeaturedPostContent} justifyContent="flex-end" direction="column">
+            <div className={classes.tagsContainer} md={12}>
+              {post.hashTags.map((t, i) => (
+                <Typography variant="h6" color="inherit" paragraph className={classes.tag} key={i}>
                   {t}
                 </Typography>
               ))}
@@ -93,7 +92,7 @@ export default function MainFeaturedPost (props) {
             <Typography component="h3" variant="h4" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <div container className={classes.tagsContainer}>
+            <div className={classes.tagsContainer}>
               <Typography variant="h6" color="inherit" paragraph className={classes.subtitle} style={{ marginRight: "2rem" }}>
                 {post.location}
               </Typography>

@@ -40,7 +40,8 @@ const sections = [
 export default function Home () {
     const classes = useStyles();
     let featuredPost = []
-    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} />)
+    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} key={i}/>)
+    console.log("theme", theme)
     return (
         <ThemeProvider theme={theme}>
             <Paper className={classes.screen}>

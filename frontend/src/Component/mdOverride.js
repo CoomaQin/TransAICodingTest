@@ -1,23 +1,30 @@
 import React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import { Paper, Link, CssBaseline, Grid, Divider } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../Component/theme';
+
 
 const styles = (theme) => ({
   listItem: {
     marginTop: theme.spacing(1),
   },
+  title: {
+    color: "#fff"
+  }
 });
+
 
 const options = {
   overrides: {
     h1: {
-      component: Typography,
-      props: {
-        gutterBottom: true,
-        variant: 'h5',
-      },
+      component: withStyles(styles)(({ classes, ...props }) => (
+        <ThemeProvider  theme={theme}>
+          <Typography gutterBottom variant={'h5'} className={classes.title} {...props} />
+        </ThemeProvider>
+      ))
     },
     h2: { component: Typography, props: { gutterBottom: true, variant: 'h6' } },
     h3: { component: Typography, props: { gutterBottom: true, variant: 'subtitle1' } },
@@ -37,6 +44,8 @@ const options = {
   },
 };
 
-export default function Markdown(props) {
-  return <ReactMarkdown options={options} {...props} />;
+export default function Markdown (props) {
+  return (
+    <ReactMarkdown options={options} {...props} />
+  );
 }

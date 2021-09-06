@@ -1,14 +1,18 @@
 import Main from '../Component/Main';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../Component/theme';
 
-export default function Markdown () {
-    const [post, setPost] = useState("")
-    useEffect(async () => {
-        const result = await axios(
-          'https://raw.githubusercontent.com/mui-org/material-ui/master/docs/src/pages/getting-started/templates/blog/blog-post.1.md',
-        );
-        setPost(result.data);
-      })
-    return (<Main title="From the firehose" posts={[post]} />)
+export default function Markdown (props) {
+  const [post, setPost] = useState("")
+  useEffect(async () => {
+    const result = await axios(props.url);
+    setPost(result.data);
+  })
+  return (
+    <ThemeProvider theme={theme}>
+      <Main title="From the firehose" posts={[post]} />
+    </ThemeProvider>
+    )
 }

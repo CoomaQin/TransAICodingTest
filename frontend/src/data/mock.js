@@ -24,7 +24,7 @@ mockData["post"] = [
         location: "Boston",
         img: "https://source.unsplash.com/random",
         imageTitle: "img title 2",
-        url: ""
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/post2.md"
     },
     {
         title: "Post3",

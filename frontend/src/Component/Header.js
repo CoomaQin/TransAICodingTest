@@ -61,8 +61,8 @@ export default function Header(props) {
           {"Huixiong Qin"}
         </Typography>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          {sections.map((section) => (
-            <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2}>
+          {sections.map((section, i) => (
+            <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2} key={i}>
               <Button
                 variant="outlined"
                 color="primary"

@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebarSection: {
     marginTop: theme.spacing(3),
+    color: "white"
   },
 }));
 
@@ -23,7 +24,7 @@ export default function Sidebar(props) {
   const { languageTle, techTle, languageDes, techDes, social, archives } = props;
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item>
       <Paper elevation={0} className={classes.sidebarAboutBox}>
         <Typography variant="h6" gutterBottom>
           {languageTle}

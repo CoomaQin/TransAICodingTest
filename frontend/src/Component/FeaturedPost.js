@@ -7,7 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import useInterval from '../utility/hook';
 
 
 const useStyles = makeStyles((theme) => ({
