@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import {Button} from '@material-ui/core';
+import { Button, SvgIcon } from '@material-ui/core';
+import { ReactComponent as Logo } from "../images/logo.svg";
 
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`
   },
-  toolbarTitle: {
-    flex: 1,
-    width: "70%"
+  toolbarLogo: {
+    // flex: 1,
+    width: "50%",
+    height: "5rem"
   },
   toolbarSecondary: {
     justifyContent: 'space-evenly',
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid",
     color: theme.palette.text.main,
     backgroundColor: "black"
-    
+
   },
   text: {
     color: theme.palette.text.main
@@ -50,16 +52,7 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Typography
-          classes={{colorPrimary: classes.text}} 
-          color="primary"
-          component="h2"
-          variant="h5"
-          align="center"
-          className={classes.toolbarTitle}
-        >
-          {"Huixiong Qin"}
-        </Typography>
+        <Logo className={classes.toolbarLogo} />
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           {sections.map((section, i) => (
             <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2} key={i}>

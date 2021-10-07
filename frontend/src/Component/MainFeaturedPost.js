@@ -32,13 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
   mainFeaturedPostContent: {
     position: 'relative',
-    height: "20rem",
+    height: "25rem",
     marginBottom: "1rem"
   },
   mainFeaturedPostContainer: {
     border: "2rem solid",
     borderImageSlice: 1,
-    // borderImageSource: "linear-gradient(to left, red, orange)"
     borderImageSource: props => `linear-gradient(to left, rgba(${255 - props.broderColor}, 30, 225, 1), rgba(${props.broderColor}, 30, 225, 1))`,
   },
   tagsContainer: {

@@ -22,9 +22,7 @@ const theme = createTheme({
       default: 'black',
     },
   },
-  background:{
-    image: "url(https://i.loli.net/2021/08/02/TvYdfA1V3eyHw5h.jpg)"
-  }
+  background: "url(https://i.loli.net/2021/09/18/PzBL3GxMRydYEIm.jpg)"
 });
 
 export default theme;

@@ -22,10 +22,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     width: "36rem",
+    height: "18rem",
     transition: "background-size 1s",
     '&:hover': {
       backgroundSize: "120%",
    },
+   marginRight: "0.5rem",
+   marginLeft: "0.5rem",
+   marginBottom: "1rem"
   },
   card: {
     // border: "0.2rem solid",

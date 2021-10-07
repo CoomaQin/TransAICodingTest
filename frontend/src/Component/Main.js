@@ -5,7 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Markdown from './mdOverride';
+import Header from './Header';
 import Sidebar from './Sidebar';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -18,13 +20,22 @@ const useStyles = makeStyles((theme) => ({
         ...theme.typography.body2,
         padding: theme.spacing(3, 0),
         color: theme.palette.text.main,
+
+    },
+    body: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        marginTop: "2rem",
+        marginLeft: "10rem",
+        marginRight: "10rem"
     },
     screen: {
         // border: "0.5rem solid",
         // borderColor: "#C236F2",
-        backgroundImage: theme.background.image,
-        display: "flex",
-        flexDirection: "row",
+        backgroundImage: theme.background,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     },
     title: {
         color: theme.palette.common.white
@@ -43,6 +54,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const images = ["https://source.unsplash.com/random", "https://source.unsplash.com/random"]
+
+const sections = [
+    { title: 'Home', url: '/', selected: true },
+    { title: 'Test', url: '/markdown', selected: false },
+];
 
 const sidebar = {
     title: 'About',
@@ -68,34 +84,34 @@ const sidebar = {
     ],
 };
 
-export default function Main (props) {
+export default function Main(props) {
     const classes = useStyles();
     const { posts, title } = props;
-
     return (
         <Paper className={classes.screen}>
-            <Grid item xs={12} md={9}>
-                <Typography variant="h3" gutterBottom className={classes.title}>
-                    {title}
-                </Typography>
-                <Divider />
-                {posts.map((post) => (
-                    <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-                        {post}
-                    </Markdown>
-                ))}
-                {/* pictures go here */}
-                <Grid container justifyContent={"center"}>
-                    {images.map((img) => (<CardMedia className={classes.media} image={img} />))}
+            <Header title="Huixiong Qin" sections={sections} />
+            <CssBaseline />
+            <Grid container className={classes.body}>
+                <Grid item xs={12} md={9}>
+                    <Divider />
+                    {posts.map((post) => (
+                        <Markdown className={classes.markdown} key={post.substring(0, 40)}>
+                            {post}
+                        </Markdown>
+                    ))}
+                    {/* pictures go here */}
+                    <Grid container justifyContent={"center"}>
+                        {images.map((img) => (<CardMedia className={classes.media} image={img} />))}
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid item xs={3} md={3}>
-                <Sidebar
-                    title={sidebar.title}
-                    description={sidebar.description}
-                    archives={sidebar.archives}
-                    social={sidebar.social}
-                />
+                <Grid item xs={3} md={3}>
+                    <Sidebar
+                        title={sidebar.title}
+                        description={sidebar.description}
+                        archives={sidebar.archives}
+                        social={sidebar.social}
+                    />
+                </Grid>
             </Grid>
         </Paper>
     );

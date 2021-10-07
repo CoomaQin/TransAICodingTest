@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebarSection: {
     marginTop: theme.spacing(3),
-    color: "white"
+    color: theme.palette.text.main
   },
 }));
 
@@ -25,18 +25,6 @@ export default function Sidebar(props) {
 
   return (
     <Grid item>
-      <Paper elevation={0} className={classes.sidebarAboutBox}>
-        <Typography variant="h6" gutterBottom>
-          {languageTle}
-        </Typography>
-        <Typography>{languageDes}</Typography>
-      </Paper>
-      <Paper elevation={0} className={classes.sidebarAboutBox}>
-        <Typography variant="h6" gutterBottom>
-          {techTle}
-        </Typography>
-        <Typography>{techDes}</Typography>
-      </Paper>
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Side Navigator  
       </Typography>

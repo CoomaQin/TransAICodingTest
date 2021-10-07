@@ -11,9 +11,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Paper, CssBaseline, Grid, Divider } from '@material-ui/core';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(({ theme }) => ({
     screen: {
-        backgroundImage: "url(https://i.loli.net/2021/08/02/TvYdfA1V3eyHw5h.jpg)",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: "url(https://i.loli.net/2021/09/18/PzBL3GxMRydYEIm.jpg)",
     },
     body: {
         display: "flex",
@@ -37,11 +39,11 @@ const sections = [
     { title: 'Test', url: '/markdown', selected: false },
 ];
 
-export default function Home () {
+export default function Home() {
+    console.log("theme", theme)
     const classes = useStyles();
     let featuredPost = []
-    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} key={i}/>)
-    console.log("theme", theme)
+    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} key={i} />)
     return (
         <ThemeProvider theme={theme}>
             <Paper className={classes.screen}>
