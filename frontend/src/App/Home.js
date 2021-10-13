@@ -6,7 +6,7 @@ import Footer from '../Component/Footer';
 import Container from '@material-ui/core/Container';
 import MainFeaturedPost from '../Component/MainFeaturedPost';
 import FeaturedPost from '../Component/FeaturedPost';
-import mockData from '../data/mock.js';
+import postData from '../data/metadata.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, CssBaseline, Grid, Divider } from '@material-ui/core';
 
@@ -43,7 +43,7 @@ export default function Home() {
     console.log("theme", theme)
     const classes = useStyles();
     let featuredPost = []
-    featuredPost = mockData.post.splice(1, mockData.post.length).map((p, i) => <FeaturedPost post={p} key={i} />)
+    featuredPost = postData.post.splice(1, postData.post.length).map((p, i) => <FeaturedPost post={p} key={i} />)
     return (
         <ThemeProvider theme={theme}>
             <Paper className={classes.screen}>
@@ -53,14 +53,14 @@ export default function Home() {
                 <Divider classes={{ root: classes.baseLine }} />
                 <Container className={classes.body} >
                     <Container className={classes.mainPost}>
-                        <MainFeaturedPost post={mockData.post[0]} />
+                        <MainFeaturedPost post={postData.post[0]} />
                     </Container>
                     <Grid className={classes.featuredPost} container direction="row" justifyContent="center" alignItems="center">
                         {featuredPost}
                     </Grid>
                 </Container>
                 <Divider classes={{ root: classes.baseLine }} />
-                <Footer title="Footer" description="Thank you for your visit!" />
+                <Footer title="That's it so far.." description="Thank you for your visit!" />
             </Paper>
         </ThemeProvider>
     )

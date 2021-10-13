@@ -11,7 +11,7 @@ function Copyright() {
     <Typography classes={{colorPrimary: classes.text}} color="primary" variant="body2" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        location finder
+        HuixiongQin
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -43,7 +43,7 @@ export default function Footer(props) {
         <Typography classes={{colorPrimary: classes.text}} color="primary" variant="subtitle1" align="center" component="p">
           {description}
         </Typography>
-        <Copyright />
+        {/* <Copyright /> */}
       </Container>
     </footer>
   );

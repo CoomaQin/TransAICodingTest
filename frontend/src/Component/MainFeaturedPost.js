@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: props => `url(${props.bgImg})`,
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -59,11 +59,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MainFeaturedPost (props) {
-
+  const { post } = props;
   let [bcr, setBcr] = useState(80);
   let [bflag, setBflag] = useState(true);
-  let classes = useStyles({ broderColor: bcr });
-  const { post } = props;
+  let classes = useStyles({ broderColor: bcr, bgImg: post.img});
 
   // contorl dynamic linear gradient broder
   useInterval(() => {
@@ -76,7 +75,7 @@ export default function MainFeaturedPost (props) {
 
   return (
     <Paper className={classes.mainFeaturedPost}>
-      {<img style={{ display: 'none' }} src={post.img} alt={post.imageText} />}
+      {/* {<img style={{ display: 'none' }} src={post.img} alt={post.imageText} />} */}
       <div className={classes.overlay} />
       <Grid >
         <Grid container className={classes.mainFeaturedPostContainer} color="red">
