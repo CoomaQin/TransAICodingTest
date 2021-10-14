@@ -36,7 +36,7 @@ const useStyles = makeStyles(({ theme }) => ({
 
 const sections = [
     { title: 'Home', url: '/', selected: true },
-    { title: 'Test', url: '/markdown', selected: false },
+    // { title: 'Test', url: '/markdown', selected: false },
 ];
 
 export default function Home() {

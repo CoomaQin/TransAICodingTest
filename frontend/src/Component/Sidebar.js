@@ -28,8 +28,8 @@ export default function Sidebar(props) {
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Side Navigator  
       </Typography>
-      {archives.map((archive) => (
-        <div>
+      {archives.map((archive, idx) => (
+        <div key={idx}>
           <a href={archive.url}>{archive.title}</a>
         </div>
       ))}
@@ -37,7 +37,7 @@ export default function Sidebar(props) {
         Social
       </Typography>
       {social.map((network) => (
-        <Link display="block" variant="body1" href={network.url} key={network} color={network.color}>
+        <Link display="block" variant="body1" href={network.url} key={network} color={network.color} to={"google.com"}>
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
               <network.icon />

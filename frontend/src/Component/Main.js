@@ -13,7 +13,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import CardMedia from '@material-ui/core/CardMedia';
-
+import postData from '../data/metadata';
 
 const useStyles = makeStyles((theme) => ({
     markdown: {
@@ -46,47 +46,33 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     media: {
-        width: "60%",
+        width: "90%",
         paddingTop: '56.25%', // 16:9,
         marginBottom: '30px'
     }
 
 }));
 
-const images = ["https://source.unsplash.com/random", "https://source.unsplash.com/random"]
-
 const sections = [
     { title: 'Home', url: '/', selected: true },
-    { title: 'Test', url: '/markdown', selected: false },
+    // { title: 'Test', url: '/markdown', selected: false },
 ];
 
 const sidebar = {
     title: 'About',
     description:
         'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-    archives: [
-        { title: 'March 2020', url: '#' },
-        { title: 'February 2020', url: '#' },
-        { title: 'January 2020', url: '#' },
-        { title: 'November 1999', url: '#' },
-        { title: 'October 1999', url: '#' },
-        { title: 'September 1999', url: '#' },
-        { title: 'August 1999', url: '#' },
-        { title: 'July 1999', url: '#' },
-        { title: 'June 1999', url: '#' },
-        { title: 'May 1999', url: '#' },
-        { title: 'April 1999', url: '#' },
-    ],
+    archives: postData.post.map(p => ({title: p.date, url: p.path})),
     social: [
-        { name: 'GitHub', icon: GitHubIcon },
-        { name: 'Twitter', icon: TwitterIcon },
-        { name: 'Facebook', icon: FacebookIcon },
+        { name: 'GitHub', icon: GitHubIcon, to: "https://github.com/CoomaQin"},
     ],
 };
 
 export default function Main(props) {
     const classes = useStyles();
-    const { posts, title } = props;
+    const { posts, images } = props;
+    console.log("images", images)
+    
     return (
         <Paper className={classes.screen}>
             <Header title="Huixiong Qin" sections={sections} />
@@ -94,14 +80,14 @@ export default function Main(props) {
             <Grid container className={classes.body}>
                 <Grid item xs={12} md={9}>
                     <Divider />
-                    {posts.map((post) => (
-                        <Markdown className={classes.markdown} key={post.substring(0, 40)}>
+                    {posts.map((post, idx) => (
+                        <Markdown className={classes.markdown} key={idx}>
                             {post}
                         </Markdown>
                     ))}
                     {/* pictures go here */}
                     <Grid container justifyContent={"center"}>
-                        {images.map((img) => (<CardMedia className={classes.media} image={img} />))}
+                        {images.map((img, idx) => (<CardMedia className={classes.media} image={img} key={idx}/>))}
                     </Grid>
                 </Grid>
                 <Grid item xs={3} md={3}>

@@ -34,11 +34,13 @@ const useStyles = makeStyles((theme) => ({
   toolbarBtn: {
     padding: theme.spacing(1),
     flexShrink: 0,
-    fontSize: 20,
+    fontSize: 15,
     border: "2px solid",
     color: theme.palette.text.main,
-    backgroundColor: "black"
-
+    backgroundColor: "#0F0F1E",
+    '&:hover': {
+      backgroundColor: "#1b1b36",
+    }
   },
   text: {
     color: theme.palette.text.main
@@ -58,7 +60,7 @@ export default function Header(props) {
             <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2} key={i}>
               <Button
                 variant="outlined"
-                color="primary"
+                // color="primary"
                 key={section.title}
                 broder={4}
                 href={section.url}

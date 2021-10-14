@@ -13,13 +13,19 @@ import Markdown from './App/Markdown'
  * Don't forget to import the components above after adding new route.
  */
 const MainRoute = () => {
+    const posts = postData.post.map((p, idx) =>
+        <Route exact path={p.path} key={idx}>
+            <Markdown url={p.url} images={[p.img]}/>
+        </Route>
+    )
     return (
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/markdown"> 
-                <Markdown url={postData.post[1].url}/>
+                <Markdown url={postData.post[1].url} images={[postData.post[1].img]}/>
             </Route>
+            {posts}
         </Switch>
     )
 };

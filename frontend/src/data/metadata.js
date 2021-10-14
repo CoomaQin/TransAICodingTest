@@ -3,6 +3,7 @@ let postData = {}
 postData["post"] = [
     {
         title: "Intelligent Grade Crossing Trespassing",
+        path: "/igct",
         hashTags: ["Computer Vision", "AI", "Web app"],
         date: "In progress",
         location: "New Brunwick",
@@ -11,6 +12,7 @@ postData["post"] = [
     },
     {
         title: "Tourtod",
+        path: "/tourtod",
         hashTags: ["Software development", "Mobile app"],
         date: "Jan 2020 ~ Jan 2021",
         location: "",
@@ -19,6 +21,7 @@ postData["post"] = [
     },
     {
         title: "Maritime Asset Management System",
+        path: "/mams",
         hashTags: ["Software development"],
         date: "Dec 2020",
         location: "New Brunswick",
@@ -27,6 +30,7 @@ postData["post"] = [
     },
     {
         title: "Tennis Go",
+        path: "/tennisgo",
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",
         location: "Boston",
@@ -35,6 +39,7 @@ postData["post"] = [
     },
     {
         title: "Track Chart",
+        path: "/trackchart",
         hashTags: ["Software development", "Data visualization"],
         date: "Jun 2020",
         location: "New Brunswick",

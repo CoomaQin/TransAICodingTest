@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     border: "0.2rem solid",
     borderColor: "black",
     position: 'relative',
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: props => `url(${props.bgImg})`,
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
     transition: "background-size 1s",
     '&:hover': {
       backgroundSize: "120%",
-   },
-   marginRight: "0.5rem",
-   marginLeft: "0.5rem",
-   marginBottom: "1rem"
+    },
+    marginRight: "0.5rem",
+    marginLeft: "0.5rem",
+    marginBottom: "1rem"
   },
   card: {
     // border: "0.2rem solid",
@@ -45,13 +45,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.main
   },
   btn: {
-    color: "white"
+    color: "black"
   }
 }));
 
 export default function FeaturedPost (props) {
-  const classes = useStyles();
   const post = props.post;
+  const classes = useStyles({ bgImg: post.img });
   // let [bgSize, setBgSize] = useState(100);
 
   return (
@@ -68,9 +68,7 @@ export default function FeaturedPost (props) {
             {post.location}
           </Typography>
         </CardContent>
-        <CardActionArea component="a" href="#" >
-          <Button size="small" className={classes.btn}>Learn More</Button>
-        </CardActionArea>
+        <Button size="small" className={classes.btn} href={post.path}>Learn More</Button>
       </Grid>
     </Paper>
   );

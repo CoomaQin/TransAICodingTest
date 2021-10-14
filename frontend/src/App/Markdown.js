@@ -12,7 +12,7 @@ export default function Markdown (props) {
   })
   return (
     <ThemeProvider theme={theme}>
-      <Main title="From the firehose" posts={[post]} />
+      <Main title="From the firehose" posts={[post]} images={props.images}/>
     </ThemeProvider>
     )
 }
