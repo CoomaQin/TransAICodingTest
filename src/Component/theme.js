@@ -16,7 +16,7 @@ const theme = createTheme({
     text: {
       main: '#64EAEC',
       tag: '#C236F2',
-      title: '#000'
+      title: '#fff'
     },
     background: {
       default: 'black',

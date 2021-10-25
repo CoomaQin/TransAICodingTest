@@ -15,15 +15,15 @@ import Markdown from './App/Markdown'
 const MainRoute = () => {
     const posts = postData.post.map((p, idx) =>
         <Route exact path={p.path} key={idx}>
-            <Markdown url={p.url} images={[p.img]}/>
+            <Markdown url={p.url} images={p.contentImg} />
         </Route>
     )
     return (
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/markdown"> 
-                <Markdown url={postData.post[1].url} images={[postData.post[1].img]}/>
+            <Route exact path="/markdown">
+                <Markdown url={postData.post[1].url} images={[postData.post[1].img]} />
             </Route>
             {posts}
         </Switch>

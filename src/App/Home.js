@@ -40,7 +40,6 @@ const sections = [
 ];
 
 export default function Home() {
-    console.log("theme", theme)
     const classes = useStyles();
     let featuredPost = []
     featuredPost = postData.post.splice(1, postData.post.length).map((p, i) => <FeaturedPost post={p} key={i} />)

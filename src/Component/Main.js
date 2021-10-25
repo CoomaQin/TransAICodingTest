@@ -71,7 +71,6 @@ const sidebar = {
 export default function Main(props) {
     const classes = useStyles();
     const { posts, images } = props;
-    console.log("images", images)
     
     return (
         <Paper className={classes.screen}>

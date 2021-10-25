@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import useInterval from '../utility/hook';
 
 
@@ -55,19 +56,24 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     color: theme.palette.text.main
+  },
+  btn: {
+    color: "white",
+    width: "6rem",
+    paddingTop: "0.5rem"
   }
 }));
 
-export default function MainFeaturedPost (props) {
+export default function MainFeaturedPost(props) {
   const { post } = props;
   let [bcr, setBcr] = useState(80);
   let [bflag, setBflag] = useState(true);
-  let classes = useStyles({ broderColor: bcr, bgImg: post.img});
-
+  let classes = useStyles({ broderColor: bcr, bgImg: post.img });
+  console.log("post.path", post.path)
   // contorl dynamic linear gradient broder
   useInterval(() => {
     setBcr(bflag ? bcr + 10 : bcr - 10)
-    if ((bcr == 220) || (bcr == 80)){
+    if ((bcr == 220) || (bcr == 80)) {
       setBflag(!bflag)
       setBcr(bflag ? 210 : 90)
     }
@@ -98,9 +104,10 @@ export default function MainFeaturedPost (props) {
                 {post.date.toString()}
               </Typography>
             </div>
+            <Button variant="text" size="small" className={classes.btn} href={post.path}>Learn More</Button>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid >
     </Paper>
   );
 }

@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  console.log(props)
   const { languageTle, techTle, languageDes, techDes, social, archives } = props;
 
   return (

@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    backgroundColor: 'black',
     width: "36rem",
     height: "18rem",
     transition: "background-size 1s",
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.main
   },
   btn: {
-    color: "black"
+    color: "white"
   }
 }));
 

@@ -8,7 +8,8 @@ postData["post"] = [
         date: "In progress",
         location: "New Brunwick",
         img: "https://i.loli.net/2021/10/09/JVsP38qB5b9CvpW.jpg",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/igct.md"
+        contentImg: ["https://i.loli.net/2021/10/09/JVsP38qB5b9CvpW.jpg"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
     },
     {
         title: "Tourtod",
@@ -16,8 +17,9 @@ postData["post"] = [
         hashTags: ["Software development", "Mobile app"],
         date: "Jan 2020 ~ Jan 2021",
         location: "",
-        img: "https://i.loli.net/2021/10/13/QvXhikCNoSgsJ8n.png",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/tourtod.md"
+        img: "https://i.loli.net/2021/10/25/WbikLsZXCjDBF4T.png",
+        contentImg: ["https://i.loli.net/2021/10/13/QvXhikCNoSgsJ8n.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tourtod.md"
     },
     {
         title: "Maritime Asset Management System",
@@ -25,8 +27,9 @@ postData["post"] = [
         hashTags: ["Software development"],
         date: "Dec 2020",
         location: "New Brunswick",
-        img: "https://i.loli.net/2021/10/13/jpV8JhnLUZIy9o6.png",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/mams.md"
+        img: "https://i.loli.net/2021/10/25/tXUaM3vshWfGqLZ.png",
+        contentImg: ["https://i.loli.net/2021/10/13/jpV8JhnLUZIy9o6.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/mams.md"
     },
     {
         title: "Tennis Go",
@@ -34,8 +37,9 @@ postData["post"] = [
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",
         location: "Boston",
-        img: "https://source.unsplash.com/random",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/tennisgo.md"
+        img: "https://i.loli.net/2021/10/25/mMYT2B4UZwAx9Pz.png",
+        contentImg: ["https://i.loli.net/2021/10/25/mMYT2B4UZwAx9Pz.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tennisgo.md"
     },
     {
         title: "Track Chart",
@@ -43,8 +47,9 @@ postData["post"] = [
         hashTags: ["Software development", "Data visualization"],
         date: "Jun 2020",
         location: "New Brunswick",
-        img: "https://i.loli.net/2021/10/13/ATU4slZ6qxFkbPB.jpg",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/frontend/src/data/trackchart.md"
+        img: "https://i.loli.net/2021/10/25/4DipyNJ5L9qd1bv.png",
+        contentImg: ["https://i.loli.net/2021/10/25/SqrQ4v5cWsJeUdm.jpg", "https://i.loli.net/2021/10/25/tRHA9TJS528ryEU.jpg"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/trackchart.md"
     }
 ]
 
