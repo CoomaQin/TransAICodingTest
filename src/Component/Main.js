@@ -25,10 +25,16 @@ const useStyles = makeStyles((theme) => ({
     body: {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
         marginTop: "2rem",
-        marginLeft: "10rem",
-        marginRight: "10rem"
+        marginLeft: "20rem",
+        marginRight: "20rem"
+    },
+    content: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        // border: "0.5rem solid",
+        // borderColor: "#C236F2",
     },
     screen: {
         // border: "0.5rem solid",
@@ -36,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: theme.background,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        height: "100rem"
     },
     title: {
         color: theme.palette.common.white
@@ -46,9 +53,13 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     media: {
-        width: "90%",
+        width: "100%",
         paddingTop: '56.25%', // 16:9,
         marginBottom: '30px'
+
+    },
+    sidebar: {
+        paddingLeft: "5rem"
     }
 
 }));
@@ -62,22 +73,22 @@ const sidebar = {
     title: 'About',
     description:
         'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-    archives: postData.post.map(p => ({title: p.date, url: p.path})),
+    archives: postData.post.map(p => ({ title: p.date, url: p.path })),
     social: [
-        { name: 'GitHub', icon: GitHubIcon, to: "https://github.com/CoomaQin"},
+        { name: 'GitHub', icon: GitHubIcon, to: "https://github.com/CoomaQin" },
     ],
 };
 
 export default function Main(props) {
     const classes = useStyles();
     const { posts, images } = props;
-    
+
     return (
         <Paper className={classes.screen}>
             <Header title="Huixiong Qin" sections={sections} />
             <CssBaseline />
             <Grid container className={classes.body}>
-                <Grid item xs={12} md={9}>
+                <Grid className={classes.content} item xs={10} md={7} justifyContent={"center"}>
                     <Divider />
                     {posts.map((post, idx) => (
                         <Markdown className={classes.markdown} key={idx}>
@@ -85,11 +96,11 @@ export default function Main(props) {
                         </Markdown>
                     ))}
                     {/* pictures go here */}
-                    <Grid container justifyContent={"center"}>
-                        {images.map((img, idx) => (<CardMedia className={classes.media} image={img} key={idx}/>))}
+                    <Grid item xs={5} md={5} justifyContent={"center"}>
+                        {images.map((img, idx) => (<CardMedia className={classes.media} image={img} key={idx} />))}
                     </Grid>
                 </Grid>
-                <Grid item xs={3} md={3}>
+                <Grid item xs={3} md={3} className={classes.sidebar}>
                     <Sidebar
                         title={sidebar.title}
                         description={sidebar.description}

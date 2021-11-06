@@ -1,5 +1,6 @@
 import { red } from '@material-ui/core/colors';
 import { createTheme } from '@material-ui/core/styles';
+import bgImg from '../images/bg_sm.png';
 
 // A custom theme for this app
 const theme = createTheme({
@@ -22,7 +23,7 @@ const theme = createTheme({
       default: 'black',
     },
   },
-  background: "url(https://i.loli.net/2021/09/18/PzBL3GxMRydYEIm.jpg)"
+  background: `url(${bgImg})`
 });
 
 export default theme;
