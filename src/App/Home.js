@@ -9,13 +9,13 @@ import FeaturedPost from '../Component/FeaturedPost';
 import postData from '../data/metadata.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, CssBaseline, Grid, Divider } from '@material-ui/core';
-
+import bgImg from '../images/bg_sm.png';
 
 const useStyles = makeStyles(({ theme }) => ({
     screen: {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: "url(https://i.loli.net/2021/09/18/PzBL3GxMRydYEIm.jpg)",
+        backgroundImage: `url(${bgImg})`,
     },
     body: {
         display: "flex",

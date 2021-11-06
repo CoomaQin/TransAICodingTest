@@ -7,8 +7,8 @@ postData["post"] = [
         hashTags: ["Computer Vision", "AI", "Web app"],
         date: "In progress",
         location: "New Brunwick",
-        img: "https://i.loli.net/2021/10/09/JVsP38qB5b9CvpW.jpg",
-        contentImg: ["https://i.loli.net/2021/10/09/JVsP38qB5b9CvpW.jpg"],
+        img: "https://i.loli.net/2021/11/06/tUrZdJ1gOzTm3GI.png",
+        contentImg: ["https://i.loli.net/2021/11/06/tUrZdJ1gOzTm3GI.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
     },
     {
@@ -37,8 +37,8 @@ postData["post"] = [
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",
         location: "Boston",
-        img: "https://i.loli.net/2021/10/25/mMYT2B4UZwAx9Pz.png",
-        contentImg: ["https://i.loli.net/2021/10/25/mMYT2B4UZwAx9Pz.png"],
+        img: "https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png",
+        contentImg: ["https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tennisgo.md"
     },
     {
@@ -47,7 +47,7 @@ postData["post"] = [
         hashTags: ["Software development", "Data visualization"],
         date: "Jun 2020",
         location: "New Brunswick",
-        img: "https://i.loli.net/2021/10/25/4DipyNJ5L9qd1bv.png",
+        img: "https://i.loli.net/2021/11/06/SFTUHL82E41vIKM.png",
         contentImg: ["https://i.loli.net/2021/10/25/SqrQ4v5cWsJeUdm.jpg", "https://i.loli.net/2021/10/25/tRHA9TJS528ryEU.jpg"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/trackchart.md"
     }

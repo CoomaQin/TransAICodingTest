@@ -69,7 +69,6 @@ export default function MainFeaturedPost(props) {
   let [bcr, setBcr] = useState(80);
   let [bflag, setBflag] = useState(true);
   let classes = useStyles({ broderColor: bcr, bgImg: post.img });
-  console.log("post.path", post.path)
   // contorl dynamic linear gradient broder
   useInterval(() => {
     setBcr(bflag ? bcr + 10 : bcr - 10)
