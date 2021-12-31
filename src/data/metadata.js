@@ -12,7 +12,7 @@ postData["post"] = [
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
     },
     {
-        title: "Tourtod",
+        title: "Tourtod --- Travel Mobile App",
         path: "/tourtod",
         hashTags: ["Software development", "Mobile app"],
         date: "Jan 2020 ~ Jan 2021",
@@ -32,7 +32,7 @@ postData["post"] = [
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/mams.md"
     },
     {
-        title: "Tennis Go",
+        title: "TennisGo Web Mini-game",
         path: "/tennisgo",
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",

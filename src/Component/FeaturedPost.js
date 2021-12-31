@@ -36,17 +36,38 @@ const useStyles = makeStyles((theme) => ({
     // border: "0.2rem solid",
     // borderColor: "black",
   },
+  // titleContainer: {
+  //   marginBottom: "0.5rem",
+  //   marginTop: "0.5rem",
+  //   width: "8rem",
+  // },
   tag: {
     color: theme.palette.text.tag
   },
   title: {
-    color: theme.palette.text.title
+    color: theme.palette.text.title,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    textAlign: "center",
+
+
   },
   loc: {
-    color: theme.palette.text.main
+    marginTop: "0.5rem",
+    color: theme.palette.text.main,
+    width: "10rem",
+    textAlign: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+
   },
   btn: {
-    color: "white"
+    color: "white",
+    width: "6rem",
+    marginTop: "0.5rem",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    '&:hover': {
+      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      color: "#0F0F1E",
+    },
   }
 }));
 

@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
   mainFeaturedPostContent: {
     position: 'relative',
     height: "25rem",
-    marginBottom: "1rem"
+    marginBottom: "1rem",
+    paddingLeft: "3rem"
   },
   mainFeaturedPostContainer: {
     border: "2rem solid",
@@ -44,12 +45,31 @@ const useStyles = makeStyles((theme) => ({
   tagsContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-start",
-    height: "1.5rem"
+    justifyContent: "space-evenly",
+    height: "1.5rem",
+    width: "14rem",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
+
   tag: {
     marginRight: "1rem",
-    color: theme.palette.text.tag
+    color: theme.palette.text.tag,
+    // border: "2px solid",
+  },
+  titleContainer: {
+    marginBottom: "0.5rem",
+    marginTop: "0.5rem",
+    height: "3rem",
+    width: "40rem",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
+  locationContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    height: "2rem",
+    width: "18rem",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   title: {
     margin: "2rem",
@@ -60,11 +80,16 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     color: "white",
     width: "6rem",
-    paddingTop: "0.5rem"
+    marginTop: "0.5rem",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    '&:hover': {
+      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      color: "#0F0F1E",
+    },
   }
 }));
 
-export default function MainFeaturedPost(props) {
+export default function MainFeaturedPost (props) {
   const { post } = props;
   let [bcr, setBcr] = useState(80);
   let [bflag, setBflag] = useState(true);
@@ -87,15 +112,17 @@ export default function MainFeaturedPost(props) {
           <Grid container className={classes.mainFeaturedPostContent} justifyContent="flex-end" direction="column">
             <div className={classes.tagsContainer} md={12}>
               {post.hashTags.map((t, i) => (
-                <Typography variant="h6" color="inherit" paragraph className={classes.tag} key={i}>
+                <Typography variant="h8" color="inherit" paragraph className={classes.tag} key={i}>
                   {t}
                 </Typography>
               ))}
             </div>
-            <Typography component="h3" variant="h4" color="inherit" gutterBottom>
-              {post.title}
-            </Typography>
-            <div className={classes.tagsContainer}>
+            <div className={classes.titleContainer} md={12}>
+              <Typography component="h3" variant="h4" color="inherit" gutterBottom>
+                {post.title}
+              </Typography>
+            </div>
+            <div className={classes.locationContainer}>
               <Typography variant="h6" color="inherit" paragraph className={classes.subtitle} style={{ marginRight: "2rem" }}>
                 {post.location}
               </Typography>

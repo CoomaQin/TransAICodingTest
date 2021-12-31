@@ -9,7 +9,8 @@ import { ReactComponent as Logo } from "../images/logo.svg";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`
+    borderBottom: `1px solid ${theme.palette.divider}`,
+
   },
   toolbarLogo: {
     // flex: 1,
@@ -18,38 +19,42 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarSecondary: {
     justifyContent: 'space-evenly',
-    width: "30%",
-    overflowX: 'auto',
+    width: "40%",
     // border: "2px solid",
+
+  },
+  linkContainer: {
 
   },
   linkContainerSelected: {
     backgroundColor: '#FAEBD7',
 
   },
-  linkContainer: {
+  linkContainerUnselected: {
     backgroundColor: 'white',
-
   },
   toolbarBtn: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-    fontSize: 15,
-    border: "2px solid",
+    fontSize: 12,
+    border: `${theme.palette.text.main} 0.125rem solid`,
     color: theme.palette.text.main,
+    boxShadow: `0 0 0.5rem 0 ${theme.palette.text.main}`,
+    textShadow: '0 0 0.5em rgba(255,255,255,0.5)',
     backgroundColor: "#0F0F1E",
     '&:hover': {
-      backgroundColor: "#1b1b36",
-    }
+      backgroundColor: theme.palette.text.main,
+      color: "#0F0F1E",
+      textShadow: "none",
+      boxShadow: `0 0 1.2rem 0 ${theme.palette.text.main}`,
+    },
   },
   text: {
     color: theme.palette.text.main
   }
 }));
 
-export default function Header(props) {
+export default function Header (props) {
   const classes = useStyles();
-  const { sections, title } = props;
+  const { sections } = props;
 
   return (
     <React.Fragment>
@@ -57,12 +62,10 @@ export default function Header(props) {
         <Logo className={classes.toolbarLogo} />
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           {sections.map((section, i) => (
-            <div className={section.selected ? classes.linkContainerSelected : classes.linkContainer} border={2} key={i}>
+            <div className={section.selected ? (classes.linkContainerSelected, classes.linkContainer) : (classes.linkContainerUnselected, classes.linkContainer)} key={i}>
               <Button
                 variant="outlined"
-                // color="primary"
                 key={section.title}
-                broder={4}
                 href={section.url}
                 className={classes.toolbarBtn}
               >
