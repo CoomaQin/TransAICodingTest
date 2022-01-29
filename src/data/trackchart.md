@@ -1,4 +1,4 @@
-# Track Chart
+## Track Chart
 
 - Developed digital track data management system to visually overlay all infrastructure and
 operation related data; included creating a solution to handle ten-thousand-level events efficiently

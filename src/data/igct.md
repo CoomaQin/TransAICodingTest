@@ -1,4 +1,4 @@
-# Intelligent Grade Crossing Trespassing
+## Intelligent Grade Crossing Trespassing
 
 By using a customized Artificial Intelligence (AI) algorithm for automated trespassing detection based on big-video data, researchers at Rutgers Center for Advanced Infrastructure and Transportation (CAIT) were able to compile large data sets in real-time that provide insights into trespassing behavior.    
 

@@ -1,4 +1,4 @@
-# Maritime Asset Management System
+## Maritime Asset Management System
 
 Rutgers CAIT has worked with NJDOT to develop a prototype Maritime Asset Management System (MAMS) that can be used to meet the transportation asset management plan (TAMP) requirements and aid with capital planning and resource allocation. The state-of-the-art TAM approach has been implemented in a desktop-based user interface software application. The goal of the project is renovate the current MAMS prototype software to improve the user experience and extend the functionality of the tool.
 

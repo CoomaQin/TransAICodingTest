@@ -1,4 +1,4 @@
-# TourTod --- Travel Mobile App
+## TourTod --- Travel Mobile App
 
 - Designed app to provide travel services; main functionalities contain a user system, bus, hotel and ticket booking components, supporting online payment and digital coupon.
 - Based on MVC pattern, implemented model using Mongoose; controllers were implemented in NodeJS while front-end views were built in React Native.
