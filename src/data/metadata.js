@@ -3,6 +3,7 @@ let postData = {}
 postData["post"] = [
     {
         title: "AI Highway Crossing Trespasser Detection",
+        shortTitle: "AI Crossing Trespasser",
         type: "video",
         path: "/igct",
         hashTags: ["Computer Vision", "AI", "Web app"],
@@ -14,17 +15,19 @@ postData["post"] = [
     },
     {
         title: "Tubie KTV --- A Home Karaoke System",
+        shortTitle: "Tubie KTV",
         type: "video",
         path: "/tubie",
         hashTags: ["VLC", "Web scraping", "Web app"],
         date: "Aug 2022",
-        img: "https://s2.loli.net/2022/12/15/32subFlCQp8G5dn.png",
+        img: "https://s2.loli.net/2022/12/15/qBcC2ea7NvORLAX.png",
         video: "https://streamable.com/e/moyu0k?autoplay=1&nocontrols=1",
         contentImg: ["https://s2.loli.net/2022/12/15/32subFlCQp8G5dn.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tubie.md"
     },
     {
         title: "Snake 3D",
+        shortTitle: "Snake 3D",
         type: "video",
         path: "/snake3d",
         hashTags: ["Computer Graphics", "Web mini-game"],
@@ -32,21 +35,11 @@ postData["post"] = [
         img: "https://s2.loli.net/2022/01/30/o9yeGRD4PvmXMSA.png",
         contentImg: ["https://s2.loli.net/2022/01/30/o9yeGRD4PvmXMSA.png"],
         video: "https://streamable.com/e/wxlvxo?autoplay=1&nocontrols=1",
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/snake3D.md"
-    },
-    {
-        title: "TennisGo Web Mini-game",
-        type: "video",
-        path: "/tennisgo",
-        hashTags: ["Computer Graphics", "Web mini-game"],
-        date: "Sep 2020",
-        video: "https://streamable.com/e/wsju3g?autoplay=1&nocontrols=1",
-        img: "https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png",
-        contentImg: ["https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png"],
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tennisgo.md"
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/snake3d.md"
     },
     {
         title: "Maritime Asset Management System",
+        shortTitle: "Asset Management",
         type: "video",
         path: "/mams",
         hashTags: ["Software development"],
@@ -58,6 +51,7 @@ postData["post"] = [
     },
     {
         title: "TennisGo Web Mini-game",
+        shortTitle: "TennisGo",
         type: "image",
         path: "/tennisgo",
         hashTags: ["Computer Graphics", "Web mini-game"],
@@ -69,6 +63,7 @@ postData["post"] = [
     },
     {
         title: "Tourtod --- Travel Mobile App",
+        shortTitle: "Tourtod Mobile App",
         type: "image",
         path: "/tourtod",
         hashTags: ["Software development", "Mobile app"],
@@ -79,6 +74,7 @@ postData["post"] = [
     },
     {
         title: "Track Chart",
+        shortTitle: "Track Chart",
         type: "image",
         path: "/trackchart",
         hashTags: ["Software development", "Data visualization"],

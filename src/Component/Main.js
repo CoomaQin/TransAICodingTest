@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     sidebar: {
-        paddingLeft: "5rem"
+        paddingLeft: "4rem"
     }
 
 }));
@@ -73,7 +73,7 @@ const sidebar = {
     title: 'About',
     description:
         'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-    archives: postData.post.map(p => ({ title: p.date, url: p.path })),
+    archives: postData.post.map(p => ({ title: `${p.shortTitle}`, url: p.path })),
     social: [
         { name: 'GitHub', icon: GitHubIcon, to: "https://github.com/CoomaQin" },
     ],

@@ -25,7 +25,7 @@ export default function Sidebar(props) {
   return (
     <Grid item>
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-        Side Navigator  
+        Projects 
       </Typography>
       {archives.map((archive, idx) => (
         <div key={idx}>
