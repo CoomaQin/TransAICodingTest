@@ -1,5 +1,7 @@
-## Intelligent Grade Crossing Trespassing
+## AI Highway Crossing Trespasser Detection
+
+Fatalities at grade crossings account for an average of 33% percent of all fatalities in the railroad industry in the past ten years. Detect grade-crossing trespassing in surveillance camera footages can be helpful.
 
 By using a customized Artificial Intelligence (AI) algorithm for automated trespassing detection based on big-video data, researchers at Rutgers Center for Advanced Infrastructure and Transportation (CAIT) were able to compile large data sets in real-time that provide insights into trespassing behavior.    
 
-Lead by Dr. Xiang Liu, lead of the Rail and Transit Program and an associate professor in Transportation Engineering at Rutgers. I supercharge the algorithm development group. Retrained DL models for object detection and object tracking that reach 81\% of precision and 93% of recall. Besides, we improved the signal detector, based on short time Fourier transform, whose accuracy and double-counting rate improved 25% and 40%. A light-weight gate event detection algorithm as a complement of signal detection
+Supervised by Dr. Xiang Liu, lead of the Rail and Transit Program and an associate professor in Transportation Engineering at Rutgers. I lead the algorithm development group to work on IGCT, an AI‑based surveillance system for grade‑crossing analysis, built mainly by MongoDB, Kafka OpenCV and React. I organized the model customization, including YOLOv5 for object detection, DeepSORT for object tracking, and a light‑weight CNN for signal activation detection. The precisions of trespassing detection and signal detection are 95% and 98% in more than 3 months of uptime, while the recalls of them are 88% and 95% in more than 120 hours of testing. We also developed the CICD pipeline using Docker, GitLab, AWS and automated the accuracy validation process using Pandas.

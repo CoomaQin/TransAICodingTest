@@ -2,7 +2,7 @@ let postData = {}
 
 postData["post"] = [
     {
-        title: "Intelligent Grade Crossing Trespassing",
+        title: "AI Highway Crossing Trespasser Detection",
         type: "video",
         path: "/igct",
         hashTags: ["Computer Vision", "AI", "Web app"],
@@ -11,6 +11,17 @@ postData["post"] = [
         video: "https://streamable.com/e/4pt58b?autoplay=1&nocontrols=1",
         contentImg: ["https://i.loli.net/2021/11/06/tUrZdJ1gOzTm3GI.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
+    },
+    {
+        title: "Tubie KTV --- A Home Karaoke System",
+        type: "video",
+        path: "/tubie",
+        hashTags: ["VLC", "Web scraping", "Web app"],
+        date: "Aug 2022",
+        img: "https://s2.loli.net/2022/12/15/32subFlCQp8G5dn.png",
+        video: "https://streamable.com/e/moyu0k?autoplay=1&nocontrols=1",
+        contentImg: ["https://s2.loli.net/2022/12/15/32subFlCQp8G5dn.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tubie.md"
     },
     {
         title: "Snake 3D",
@@ -24,14 +35,15 @@ postData["post"] = [
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/snake3D.md"
     },
     {
-        title: "Tourtod --- Travel Mobile App",
-        type: "image",
-        path: "/tourtod",
-        hashTags: ["Software development", "Mobile app"],
-        date: "Jan 2020 ~ Jan 2021",
-        img: "https://i.loli.net/2021/10/25/WbikLsZXCjDBF4T.png",
-        contentImg: ["https://i.loli.net/2021/10/13/QvXhikCNoSgsJ8n.png"],
-        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tourtod.md"
+        title: "TennisGo Web Mini-game",
+        type: "video",
+        path: "/tennisgo",
+        hashTags: ["Computer Graphics", "Web mini-game"],
+        date: "Sep 2020",
+        video: "https://streamable.com/e/wsju3g?autoplay=1&nocontrols=1",
+        img: "https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png",
+        contentImg: ["https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tennisgo.md"
     },
     {
         title: "Maritime Asset Management System",
@@ -50,9 +62,20 @@ postData["post"] = [
         path: "/tennisgo",
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",
+        video: "https://streamable.com/e/wsju3g?autoplay=1&nocontrols=1",
         img: "https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png",
         contentImg: ["https://i.loli.net/2021/11/06/Dkvahz9S1W8l3YR.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tennisgo.md"
+    },
+    {
+        title: "Tourtod --- Travel Mobile App",
+        type: "image",
+        path: "/tourtod",
+        hashTags: ["Software development", "Mobile app"],
+        date: "Jan 2020 ~ Jan 2021",
+        img: "https://i.loli.net/2021/10/25/WbikLsZXCjDBF4T.png",
+        contentImg: ["https://i.loli.net/2021/10/13/QvXhikCNoSgsJ8n.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/tourtod.md"
     },
     {
         title: "Track Chart",
