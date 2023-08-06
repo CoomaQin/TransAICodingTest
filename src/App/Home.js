@@ -59,7 +59,7 @@ export default function Home() {
                     </Grid>
                 </Container>
                 <Divider classes={{ root: classes.baseLine }} />
-                <Footer title="That's it so far.." description="Thank you for your visit!" />
+                <Footer title="Thank you for your visit!" description=" " />
             </Paper>
         </ThemeProvider>
     )
