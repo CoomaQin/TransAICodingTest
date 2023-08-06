@@ -53,10 +53,8 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     media: {
-        width: "100%",
         paddingTop: '56.25%', // 16:9,
         marginBottom: '30px'
-
     },
     sidebar: {
         paddingLeft: "4rem"
@@ -96,7 +94,7 @@ export default function Main(props) {
                         </Markdown>
                     ))}
                     {/* pictures go here */}
-                    <Grid item xs={5} md={5} justifyContent={"center"}>
+                    <Grid item justifyContent={"center"}>
                         {images.map((img, idx) => (<CardMedia className={classes.media} image={img} key={idx} />))}
                     </Grid>
                 </Grid>

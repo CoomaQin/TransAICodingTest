@@ -10,7 +10,7 @@ postData["post"] = [
         date: "In progress",
         img: "https://s2.loli.net/2023/08/06/zRrpDJKlogOy9EH.png",
         video: "https://streamable.com/e/4pt58b?autoplay=1&nocontrols=1",
-        contentImg: ["https://s2.loli.net/2023/08/06/Wbtu1yUNQAx6Ewe.png", "https://s2.loli.net/2023/08/06/ZG5f3sBjbHqeAER.png"],
+        contentImg: ["https://s2.loli.net/2023/08/06/K3rPoev68UDgqEi.png", "https://s2.loli.net/2023/08/06/cDfamuHGBOxWeh2.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
     },
     {
