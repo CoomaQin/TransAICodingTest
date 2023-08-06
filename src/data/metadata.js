@@ -8,9 +8,9 @@ postData["post"] = [
         path: "/igct",
         hashTags: ["Computer Vision", "AI", "Web app"],
         date: "In progress",
-        img: "https://i.loli.net/2021/11/06/tUrZdJ1gOzTm3GI.png",
+        img: "https://s2.loli.net/2023/08/06/zRrpDJKlogOy9EH.png",
         video: "https://streamable.com/e/4pt58b?autoplay=1&nocontrols=1",
-        contentImg: ["https://i.loli.net/2021/11/06/tUrZdJ1gOzTm3GI.png"],
+        contentImg: ["https://s2.loli.net/2023/08/06/Wbtu1yUNQAx6Ewe.png", "https://s2.loli.net/2023/08/06/ZG5f3sBjbHqeAER.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
     },
     {
