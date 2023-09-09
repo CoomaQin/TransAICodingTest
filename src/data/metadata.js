@@ -19,7 +19,7 @@ postData["post"] = [
         type: "video",
         path: "/tubie",
         hashTags: ["Computer Vision", "AI", "Nvidia Jetson", "AWS"],
-        date: "Aug 2022",
+        date: "Aug 2023",
         img: "https://s2.loli.net/2023/09/10/8vrEWMjcuilBZ21.png",
         video: "https://streamable.com/e/1a29i6?autoplay=1&nocontrols=1",
         contentImg: ["https://s2.loli.net/2023/09/10/14rIBEARKWGQtUp.png", "https://s2.loli.net/2023/09/10/8vrEWMjcuilBZ21.png", "https://s2.loli.net/2023/09/10/w15FcQf4AJ3S82T.png", "https://s2.loli.net/2023/09/10/9fvbZucSsPohWEI.png"],
