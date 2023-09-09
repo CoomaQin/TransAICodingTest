@@ -6,12 +6,24 @@ postData["post"] = [
         shortTitle: "AI Crossing Trespasser",
         type: "video",
         path: "/igct",
-        hashTags: ["Computer Vision", "AI", "Web app"],
+        hashTags: ["Computer Vision", "AI", "Web app", "AWS"],
         date: "In progress",
         img: "https://s2.loli.net/2023/08/06/zRrpDJKlogOy9EH.png",
         video: "https://streamable.com/e/4pt58b?autoplay=1&nocontrols=1",
         contentImg: ["https://s2.loli.net/2023/08/06/K3rPoev68UDgqEi.png", "https://s2.loli.net/2023/08/06/cDfamuHGBOxWeh2.png", "https://s2.loli.net/2023/09/10/Z2vgo8LiMJaNIeW.png", "https://s2.loli.net/2023/09/10/mzVgvny9KNZRjU6.png"],
         url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/igct.md"
+    },
+    {
+        title: "Tubie KTV --- A Home Karaoke System",
+        shortTitle: "Tubie KTV",
+        type: "video",
+        path: "/tubie",
+        hashTags: ["Computer Vision", "AI", "Nvidia Jetson", "AWS"],
+        date: "Aug 2022",
+        img: "https://s2.loli.net/2023/09/10/8vrEWMjcuilBZ21.png",
+        video: "https://streamable.com/e/1a29i6?autoplay=1&nocontrols=1",
+        contentImg: ["https://s2.loli.net/2023/09/10/14rIBEARKWGQtUp.png", "https://s2.loli.net/2023/09/10/8vrEWMjcuilBZ21.png", "https://s2.loli.net/2023/09/10/w15FcQf4AJ3S82T.png", "https://s2.loli.net/2023/09/10/9fvbZucSsPohWEI.png"],
+        url: "https://raw.githubusercontent.com/CoomaQin/qhx-personal-website/master/src/data/railhawk.md"
     },
     {
         title: "Tubie KTV --- A Home Karaoke System",
@@ -52,7 +64,7 @@ postData["post"] = [
     {
         title: "TennisGo Web Mini-game",
         shortTitle: "TennisGo",
-        type: "image",
+        type: "video",
         path: "/tennisgo",
         hashTags: ["Computer Graphics", "Web mini-game"],
         date: "Sep 2020",

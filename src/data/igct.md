@@ -1,4 +1,4 @@
-## Highway Grade Crossing Trespassing Detection
+## RailEye: Highway Grade Crossing Trespassing Detection
 
 Our team built a full-stack system, applying state-of-the-art vision-based artificial intelligence (AI) methodologies for the recognition and comprehension of grade-crossing video data. This solution has been successfully deployed across 10+ diverse locations, collecting data over a span of 3+ years. Notably, a detailed one-year data analysis [paper](https://journals.sagepub.com/doi/abs/10.1177/03611981231163824) focused on a New Jersey site has been published in the TRR journal.
 
