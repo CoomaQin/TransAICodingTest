@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/qhx-personal-website/static/js/main.c318978f.js",
-    "static/media/bg_sm.png": "/qhx-personal-website/static/media/bg_sm.d81ef838895a81fbd9bd.png",
-    "static/media/logo.svg": "/qhx-personal-website/static/media/logo.2304046fe54ab1de4da741c30b107505.svg",
-    "index.html": "/qhx-personal-website/index.html",
-    "main.c318978f.js.map": "/qhx-personal-website/static/js/main.c318978f.js.map"
+    "main.js": "/static/js/main.7754c6f3.js",
+    "static/media/bg_sm.png": "/static/media/bg_sm.d81ef838895a81fbd9bd.png",
+    "static/media/logo.svg": "/static/media/logo.2304046fe54ab1de4da741c30b107505.svg",
+    "index.html": "/index.html",
+    "main.7754c6f3.js.map": "/static/js/main.7754c6f3.js.map"
   },
   "entrypoints": [
-    "static/js/main.c318978f.js"
+    "static/js/main.7754c6f3.js"
   ]
 }
